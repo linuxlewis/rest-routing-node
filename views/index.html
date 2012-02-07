@@ -1,0 +1,19 @@
+<table>
+    <% for(var i =0; i < notes.length; i++){ %>
+    <% var note = notes[i]; %>
+    <tr><td><p> <%= new Date(note.ts).toString()%>:
+    by <b><%= note.author %></b></p>
+    <p><%= note.note %></p>
+    </td>
+    <td>
+        <p><a href='/note/<%= note._id %>/edit'>Edit</a></p>
+        <p><form action='/note/<%= note._id %>' method='post'>
+            <input type="hidden" name="_method" value="delete" />
+            <input type="submit" value="delete" class="btn-danger" />
+
+        </form>
+        </p>
+    </td>
+    </tr>
+    <%}%>
+</table>

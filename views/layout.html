@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <title> <%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>
+    </head>
+
+    <body>
+        <div class="container">
+
+        <div class="row">
+        <div class="span10">
+        <h1>Notes Application</h1>
+        <ul class="nav nav-pills">
+        <li><a href='/note/new'>New Note</a></li>
+        <li><a href='/note'>Note index</a></li>
+        </ul>
+        <% if(locals.flash){ %>
+            <h1><%= flash %></h1>
+        <% } %>
+        </div>
+        </div>
+        <div class="row">
+        <div class="span10">
+        
+        <%- body %>
+        </div>
+        </div>
+    </body>
+        </div>
+</html>

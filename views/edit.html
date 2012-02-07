@@ -1,0 +1,26 @@
+<form method='POST' action='<%= postpath %>'>
+    <% if(note){ %>
+        <input type="hidden" name="_method" value="put"/> 
+        <input type="hidden" name="id" value="<%= note._id %>" />
+        <div class="control-group">
+            <label for="note[author]" class="control-label">Author:</label>
+            <div class="controls">
+                <input type="text" id="note[author]" name="note[author]" class="input-large" value="<%= note.author %>"/>
+                <p class="help-block">Like Mark Twain, or John Steinbeck etc...</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="note[note]" class="control-label">Note:</label>
+
+            <div class="controls">
+                <textarea id="note[note]" name="note[note]"> <%= note.note %></textarea>
+                <p class="help-block">Any note you want to make!</p>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value='submit' class="btn btn-primary" />
+            <a href="/note" class="btn">Cancel</a>
+        </div>
+        <%}%>
+    </form>
