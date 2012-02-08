@@ -38,14 +38,14 @@ The following routes are available
 
 ### Change log###
 #### version 0.1 ####
-*correct package.json
-*updated project format
+* correct package.json
+* updated project format
 
 ### TODO ###
 
 #### version 0.2 ####
-*Nested collections
-*form_for helper
+* Nested collections
+* form_for helper
 
 
 
