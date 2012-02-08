@@ -1,6 +1,9 @@
+#!/usr/bin/env node
+
+
 var util = require('util');
 var async = require('async');
-var notesdb = require('./model');
+var notesdb = require('../lib/model');
 
 notesdb.connect(function(error){
     if(error)
@@ -14,7 +17,10 @@ async.series([
             if(error){
                 util.log('ERROR ' + error);
                 cb(error);
+                return;
             }
+
+            cb();
         });
     }
 ],
@@ -23,9 +29,13 @@ async.series([
             util.log('ERROR ' + error);
             notesdb.disconnect(function(err) { });
         }
+
+        util.log("setup complete...");
+
+        process.exit();
     }
 );
-util.log("setup complete...");
+
 
 
 
