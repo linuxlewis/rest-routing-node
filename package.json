@@ -1,0 +1,11 @@
+{
+  "name": "my-app-name",
+  "description": "Rest routing example app",
+  "dependencies": {
+    "express": "2.5.x",
+    "async": "0.1.x",
+    "ejs": "0.6.x",
+    "mongoose": "2.5.x"
+  },
+  "main": "./app.js"
+}
