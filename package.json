@@ -7,5 +7,5 @@
     "ejs": "0.6.x",
     "mongoose": "2.5.x"
   },
-  "main": "./app.js"
+  "main": "./lib/app.js"
 }
