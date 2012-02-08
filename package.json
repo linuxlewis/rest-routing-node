@@ -1,5 +1,5 @@
 {
-  "name": "my-app-name",
+  "name": "node-rest-example",
   "description": "Rest routing example app",
   "version":"0.1.0",
   "dependencies": {
